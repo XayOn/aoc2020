@@ -12,6 +12,7 @@ def traverse_grid(grid, step_x, step_y, curr_pos=0):
 
 
 grid = [[a for a in a if a != '\n'] for a in open(sys.argv[1]).readlines()]
-slopes = [[1, 1], [1, 3], [1, 5], [1, 7], [2, 1]]
+slopes = ((1, 1), (1, 3), (1, 5), (1, 7), (2, 1))
 res = [Counter(traverse_grid(grid, *slope))[True] for slope in slopes]
+print(dict(zip(slopes, res)))
 print(reduce(mul, res))
