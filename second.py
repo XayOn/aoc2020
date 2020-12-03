@@ -21,7 +21,5 @@ def get_valid_passwords(policy, entries):
         yield policy(int(min_), int(max_), letter, string)
 
 
-if __name__ == "__main__":
-    lines = open(sys.argv[1]).readlines()
-    print(
-        Counter(get_valid_passwords(POLICIES[int(sys.argv[2])], lines))[True])
+lines = open(sys.argv[1]).readlines()
+print(Counter(get_valid_passwords(POLICIES[int(sys.argv[2])], lines))[True])
