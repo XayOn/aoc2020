@@ -1,9 +1,4 @@
-"""Day 1
-
-First part: python3.8 first.py input_file 2 # Match two elements
-Second part: python3.8 first.py input_file 3 # Match three elements
-"""
-
+"""Day 1"""
 import sys
 from itertools import product
 from functools import reduce
