@@ -6,3 +6,4 @@ I'll be posting my answers to AOC 2020 here.
 https://adventofcode.com/
 
 Each day will be a single file or directory (first, second, third...).
+All solutions will be parametrizable to fulfill all parts.
