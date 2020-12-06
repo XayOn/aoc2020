@@ -21,7 +21,7 @@ RULES = [
 
 
 def check_passports():
-    for line in (a for a in open(sys.argv[1]).read().split('\n\n')):
+    for line in open(sys.argv[1]).read().split('\n\n'):
         if res := dict((f.split(':') for f in line.strip().split())):
             yield all(r(res) for r in RULES[:int(sys.argv[2])])
 
