@@ -4,7 +4,6 @@ from collections import Counter
 MANDATORY = {'byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid'}
 LMT = {'in': [59, 76], 'cm': [150, 193]}
 limit = lambda x, n: LMT[x][0] <= int(n) <= LMT[x][1]
-
 CHECKS = {
     "byr": lambda x: x.isnumeric() and 1920 <= int(x) <= 2002,
     "iyr": lambda x: x.isnumeric() and 2010 <= int(x) <= 2020,
@@ -15,7 +14,6 @@ CHECKS = {
     "pid": lambda x: x.isnumeric() and len(x) == 9,
     "cid": lambda x: True
 }
-
 RULES = [
     lambda res: not MANDATORY.difference(res.keys()),
     lambda res: all(r(res.get(k, '')) for k, r in CHECKS.items())
